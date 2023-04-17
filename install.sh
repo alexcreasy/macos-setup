@@ -2,8 +2,7 @@
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-export PATH=/opt/homebrew/bin:$PATH
-export PATH=/opt/homebrew/sbin:$PATH
+eval $(/opt/homebrew/bin/brew shellenv)
 
 brew update
 brew install git ansible

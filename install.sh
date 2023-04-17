@@ -15,8 +15,6 @@ git clone https://github.com/alexcreasy/macos-setup.git
 
 cd macos-setup
 
-ansible-lint
+ansible --version
 
 echo "done"
-
-#git checkout

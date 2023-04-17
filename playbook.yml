@@ -1,0 +1,14 @@
+---
+- name: Setup MacBook
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Test output
+      ansible.builtin.debug:
+        msg: Testing
+    # failed_when: not ansible_env.PWD.endswith('/mac-ansible')
+
+# - hosts: localhost
+#   connection: local
+#   roles:
+#     - macos_setup

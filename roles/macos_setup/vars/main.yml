@@ -1,0 +1,30 @@
+---
+homebrew_packages:
+  - bash
+  - git
+  - gnupg
+  - ssh-copy-id
+  - vim
+  - rsync
+  - tmux
+  - htop
+  - tree
+  - unzip
+  - wget
+  - jq
+  - mdcat
+  - zsh
+  # - zsh-completions
+  # - zsh-autosuggestions
+  # - zsh-history-substring-search
+  # - zsh-syntax-highlighting
+  # - zsh-git-prompt
+  - coreutils
+  - findutils
+  - gnu-indent
+  - gnu-sed
+  - gnutls
+  - grep
+  - gnu-tar
+  - gnu-getopt
+  - colordiff

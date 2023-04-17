@@ -6,7 +6,7 @@ export PATH=/opt/homebrew/bin:$PATH
 export PATH=/opt/homebrew/sbin:$PATH
 
 brew update
-brew install -y git ansible
+brew install git ansible
 
 mkdir -p "$HOME/scm"
 

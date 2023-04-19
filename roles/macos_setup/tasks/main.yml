@@ -1,0 +1,7 @@
+---
+- name: Test macos_setup role
+  ansible.builtin.debug:
+    msg: Testing macos_setup role
+
+- name: Install core programs and tools
+  ansible.builtin.import_tasks: install_software.yml

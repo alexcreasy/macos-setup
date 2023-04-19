@@ -1,0 +1,14 @@
+---
+- name: Check if ~/bin exists
+  ansible.builtin.stat:
+    path: "{{ home }}/bin"
+  register: my_folder
+
+- name: "Create ~/bin if it doesn't exist"
+  ansible.builtin.file:
+    path: "{{ home }}/bin"
+    state: directory
+    mode: "0751"
+     # group: root
+     # owner: root
+  when: not my_folder.stat.exists

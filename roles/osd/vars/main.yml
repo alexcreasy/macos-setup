@@ -1,0 +1,8 @@
+---
+packages:
+  - openshift-cli
+  - ocm
+
+scripts:
+  - ocm-login
+  - ocm-extend

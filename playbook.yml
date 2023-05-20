@@ -1,13 +1,12 @@
 ---
 - name: Setup MacBook
   hosts: localhost
-  connection: local
   tasks:
     - name: Test output
       ansible.builtin.debug:
         msg: Testing
-  roles:
-    - macos_setup
+  # roles:
+  #   - osd
     # failed_when: not ansible_env.PWD.endswith('/mac-ansible')
 
 # - hosts: localhost

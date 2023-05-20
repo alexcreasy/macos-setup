@@ -1,25 +1,25 @@
 ---
 - name: Install packages for OSD
   community.general.homebrew:
-    name: '{{ packages }}'
+    name: "{{ packages }}"
     state: present
     update_homebrew: true
 
 - name: Check if ~/bin exists
   ansible.builtin.stat:
-    path: '{{ ansible_env.HOME }}/bin'
+    path: "{{ ansible_env.HOME }}/bin"
   register: bin_dir
 
 - name: Create ~/bin if it doesn't exist
   ansible.builtin.file:
-    path: '{{ bin_dir }}'
+    path: "{{ bin_dir }}"
     state: directory
-    mode: '0751'
+    mode: "0751"
   when: not bin_dir.stat.exists
 
 - name: Install scripts
   ansible.builtin.file:
-    src: '{{ role_path }}/files/scripts/{{ item }}.sh'
-    dest: '{{ bin_dir.stat.path }}/{{ item }}'
+    src: "{{ role_path }}/files/scripts/{{ item }}.sh"
+    dest: "{{ bin_dir.stat.path }}/{{ item }}"
     state: link
-  loop: '{{ scripts }}'
+  loop: "{{ scripts }}"

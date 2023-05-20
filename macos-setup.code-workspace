@@ -6,6 +6,7 @@
 	],
 	"settings": {
 		"ansible.python.interpreterPath": "/opt/homebrew/bin/python3",
-		"editor.formatOnSave": true
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	}
 }

@@ -5,11 +5,3 @@
     - name: Test output
       ansible.builtin.debug:
         msg: Testing
-  # roles:
-  #   - osd
-    # failed_when: not ansible_env.PWD.endswith('/mac-ansible')
-
-# - hosts: localhost
-#   connection: local
-#   roles:
-#     - macos_setup

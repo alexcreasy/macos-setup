@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 
+set -e
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-eval $(/opt/homebrew/bin/brew shellenv)
+if [[ $(uname -p) = 'arm' ]]; then
+    eval $(/opt/homebrew/bin/brew shellenv)
+    softwareupdate --install-rosetta --agree-to-license
+fi
 
 brew update
 brew install git ansible

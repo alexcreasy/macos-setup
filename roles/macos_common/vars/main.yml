@@ -1,10 +1,32 @@
 ---
 homebrew_kegs:
   - bash
-  - git
+  - zsh
+  - gnupg
+  - ssh-copy-id
+  - vim
+  - rsync
+  - tmux
+  - htop
+  - tree
+  - unzip
+  - wget
+  - jq
+  - mdcat
+    - coreutils
+  - findutils
+  - gnu-indent
+  - gnu-sed
+  - gnutls
+  - grep
+  - gnu-tar
+  - gnu-getopt
+  - colordiff
+
+
 
 homebrew_casks:
-  - vlc
+  # - vlc
   # - gnupg
   # - ssh-copy-id
   # - vim

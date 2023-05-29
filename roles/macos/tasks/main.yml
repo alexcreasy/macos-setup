@@ -19,7 +19,7 @@
 - name: Install Oh My ZSH
   ansible.builtin.shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   args:
-    creates: "/Users/{{ ansible_env.USER }}/.oh-my-zsh"
+    creates: "/Users/{{ username }}/.oh-my-zsh"
 
     # - name: Set ZSH as the default shell
     #   shell: chsh -s $(which zsh) {{ lookup('env', 'USER') }}

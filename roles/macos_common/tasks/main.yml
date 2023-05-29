@@ -1,3 +1,0 @@
----
-- name: Install core programs and tools
-  ansible.builtin.import_tasks: install_software.yml

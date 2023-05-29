@@ -5,17 +5,9 @@
     state: present
     update_homebrew: true
 
-- name: Check if ~/bin exists
-  ansible.builtin.stat:
-    path: "{{ ansible_env.HOME }}/bin"
-  register: bin_dir
-
-- name: Create ~/bin if it doesn't exist
-  ansible.builtin.file:
-    path: "{{ bin_dir }}"
-    state: directory
-    mode: "0751"
-  when: not bin_dir.stat.exists
+- name: Create ~/bin dir if it doesn't exist
+  ansible.builtin.import_tasks:
+    file: create_bin_dir.yml
 
 - name: Install scripts
   ansible.builtin.file:

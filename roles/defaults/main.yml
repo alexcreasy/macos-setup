@@ -1,5 +1,6 @@
 ---
 homebrew_kegs:
+  - mas
   - bash
   - gnupg
   - ssh-copy-id
@@ -8,7 +9,6 @@ homebrew_kegs:
   - mosh
   - tmux
   - htop
-  - tree
   - unzip
   - wget
   - jq
@@ -33,3 +33,10 @@ homebrew_casks:
   - enpass
   - iterm2
   - sublime-text
+
+mas_apps:
+  - 937984704 # Amphetamine
+  - 417375580 # BetterSnapTool
+  - 1153157709 # Speedtest
+  # - 1451685025 # Wireguard
+  # - 1475387142 # Tailscale

@@ -1,11 +1,8 @@
 ---
 - name: Setup MacBook
   hosts: localhost
+  gather_facts: false
   tasks:
-    - name: Test output
-      ansible.builtin.debug:
-        msg: Testing
-
     - name: Setup macos with common settings
       ansible.builtin.include_role:
-        name: macos_common
+        name: macos

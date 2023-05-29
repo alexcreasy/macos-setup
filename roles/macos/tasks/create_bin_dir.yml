@@ -1,7 +1,7 @@
 ---
 - name: Check if ~/bin exists
   ansible.builtin.stat:
-    path: "{{ ansible_env.HOME }}/bin"
+    path: "{{ lookup('env', 'HOME') }}/bin"
   register: bin_dir
 
 - name: Create ~/bin if it doesn't exist

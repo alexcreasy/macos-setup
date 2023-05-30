@@ -1,8 +1,5 @@
 ---
 - name: Setup MacBook
   hosts: localhost
-  gather_facts: false
-  tasks:
-    - name: Setup macos with common settings
-      ansible.builtin.include_role:
-        name: macos
+  roles:
+    - macos

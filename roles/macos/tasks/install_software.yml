@@ -13,6 +13,9 @@
 
 - name: Install software from MAS
   community.general.mas:
-    id: "{{ mas_apps }}"
+    id:
+      - 937984704 # Amphetamine
+      - 417375580 # BetterSnapTool
+      - 1153157709 # Speedtest
     state: present
   tags: [never, mas]

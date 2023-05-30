@@ -2,11 +2,11 @@
 - name: Check if ~/bin exists
   ansible.builtin.stat:
     path: "{{ lookup('env', 'HOME') }}/bin"
-  register: bin_dir
+  register: macos_bindir
 
 - name: Create ~/bin if it doesn't exist
   ansible.builtin.file:
-    path: "{{ bin_dir }}"
+    path: "{{ macos_bindir }}"
     state: directory
     mode: "0751"
-  when: not bin_dir.stat.exists
+  when: not macos_bindir.stat.exists
